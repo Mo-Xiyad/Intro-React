@@ -1,16 +1,19 @@
 import logo from './logo.svg';
 import './App.css';
-import Hello from './Hello' //this is a function based component
-import {name} from './Hello' 
+import Greet from './components/Greet' //this is a function based component
+import { name } from './components/Greet' //function variable
+import ClassGreeting from './components/ClassGreeting'; //class component
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-       <Hello/>
-       <p>My name is {name}</p>
-        
+        <Greet greetName="greeting a name" color="yellow" />
+        <Greet greetName="Alexsandra" color="red" />
+        <p>My name is {name}</p>
+        <ClassGreeting />
+
       </header>
     </div>
   );
